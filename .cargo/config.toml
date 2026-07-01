@@ -1,0 +1,6 @@
+[target.x86_64-unknown-linux-gnu]
+# Use mold — a much faster, lower-memory linker — instead of GNU ld.
+# mold is installed in CI (apt install mold) and avoids OOM kills when
+# linking large debug binaries (257+ object files from pyroscope deps).
+linker = "clang"
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]

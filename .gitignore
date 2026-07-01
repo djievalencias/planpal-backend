@@ -1,0 +1,11 @@
+/target
+cross-deploy.sh
+Cross.toml
+.gitignore
+.env
+/vendor
+**/CLAUDE.md
+
+*CODE_REVIEW*
+*code-quality-review*
+*security-review*
